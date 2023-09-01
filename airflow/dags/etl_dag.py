@@ -154,7 +154,7 @@ def upload_to_s3(parq_files: str, bucket_name: str) -> None:
 default_args = {
     'owner': 'admin',
     'snowflake_conn_id': SNOWFLAKE_CONN_ID,
-    'email': ["karan.b@sigmoidanalytics.com"],
+    'email': ["dflag44@gmail.com"],
     'email_on_failure': True,
     'on_failure_callback': task_fail_slack_alert
 }
