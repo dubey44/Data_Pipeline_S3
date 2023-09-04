@@ -1,0 +1,13 @@
+dbt_mock:
+  outputs:
+    dev:
+        account: "{{ env_var('DBT_SNOWFLAKE_ACCOUNT') }}" 
+        database: "{{ env_var('DBT_SNOWFLAKE_DATABASE') }}"
+        password: "{{ env_var('DBT_SNOWFLAKE_PW') }}" 
+        role: "{{ env_var('DBT_SNOWFLAKE_ROLE') }}"
+        schema: "{{ env_var('DBT_SNOWFLAKE_SCHEMA') }}"
+        threads: 5
+        type: snowflake
+        user: "{{ env_var('DBT_SNOWFLAKE_USERNAME') }}"
+        warehouse: "{{ env_var('DBT_SNOWFLAKE_WAREHOUSE') }}"
+  target: dev  
