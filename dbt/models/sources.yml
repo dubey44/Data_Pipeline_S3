@@ -1,5 +1,6 @@
 version: 2
 
+
 sources:
   - name: source_raw # this is the source_name
     database: mock_project_db
@@ -31,6 +32,7 @@ sources:
              - accepted_values:
                 values: ['AIR', 'RAIL', 'MAIL', 'REG AIR', 'TRUCK', 'FOB', 'SHIP']
 
+
       - name: order_summary
         columns:
           - name: custkey
@@ -52,6 +54,7 @@ sources:
             tests:
               - accepted_values:
                   values: ['2-HIGH', '3-MEDIUM', '1-URGENT', '4-NOT SPECIFIED' , '5-LOW'] 
+
                                           
       - name: part_supply_supplier
         columns:
