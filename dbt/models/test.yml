@@ -1,0 +1,39 @@
+version: 2
+
+models:
+  - name: customer
+    columns:
+      - name: nation_key
+        tests:
+          - relationships:
+              to: ref('nation')
+              field: nation_key
+
+  - name: nation  
+    columns:
+      - name: region_key
+        tests:
+        - relationships:
+            to: ref('region')
+            field: region_key
+
+  - name: orders
+    columns:
+      - name: cust_key
+        tests:
+        - relationships:
+            to: ref('customer')
+            field: cust_key
+
+  - name: part_supplier
+    columns:
+      - name: part_key
+        tests:
+        - relationships:
+            to: ref('part')
+            field: part_key
+      - name: supp_key
+        tests:
+        - relationships:
+            to: ref('supplier')
+            field: supp_key
