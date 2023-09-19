@@ -8,6 +8,7 @@
 }}
 
 
+
 WITH
     raw_customer AS (
         SELECT
